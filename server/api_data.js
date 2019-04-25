@@ -1,40 +1,140 @@
 define({ "api": [
   {
+    "type": "post",
+    "url": "api/profiles/edit",
+    "title": "Edit current user profile",
+    "name": "EditCurrentUserProfile",
+    "group": "Profiles",
+    "permission": [
+      {
+        "name": "Private"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "./routes/api/profiles.js",
+    "groupTitle": "Profiles"
+  },
+  {
     "type": "get",
-    "url": "api/user",
-    "title": "",
-    "name": "GetUser",
+    "url": "api/profiles/all",
+    "title": "Get all profiles",
+    "name": "GetAllProfiles",
+    "group": "Profiles",
+    "permission": [
+      {
+        "name": "Public"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "./routes/api/profiles.js",
+    "groupTitle": "Profiles"
+  },
+  {
+    "type": "get",
+    "url": "api/profiles",
+    "title": "Get current user profile",
+    "name": "GetCurrentUserProfile",
+    "group": "Profiles",
+    "permission": [
+      {
+        "name": "Private"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "./routes/api/profiles.js",
+    "groupTitle": "Profiles"
+  },
+  {
+    "type": "get",
+    "url": "api/profiles/user/:user_id",
+    "title": "Get profile of specific user",
+    "name": "GetUserProfile",
+    "group": "Profiles",
+    "permission": [
+      {
+        "name": "Public"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Unique user id</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./routes/api/profiles.js",
+    "groupTitle": "Profiles"
+  },
+  {
+    "type": "get",
+    "url": "api/users/current",
+    "title": "Get current user data",
+    "name": "GetCurrentUser",
     "group": "Users",
+    "permission": [
+      {
+        "name": "Private"
+      }
+    ],
     "version": "0.0.0",
     "filename": "./routes/api/users.js",
     "groupTitle": "Users"
   },
   {
-    "success": {
+    "type": "post",
+    "url": "api/users/register",
+    "title": "Register",
+    "name": "RegisterUser",
+    "group": "Users",
+    "permission": [
+      {
+        "name": "Public"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "./routes/api/users.js",
+    "groupTitle": "Users"
+  },
+  {
+    "type": "post",
+    "url": "/api/users/login",
+    "title": "Login",
+    "name": "UserLogin",
+    "group": "Users",
+    "permission": [
+      {
+        "name": "Public"
+      }
+    ],
+    "parameter": {
       "fields": {
-        "Success 200": [
+        "Parameter": [
           {
-            "group": "Success 200",
-            "optional": false,
-            "field": "varname1",
-            "description": "<p>No type.</p>"
-          },
-          {
-            "group": "Success 200",
+            "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "varname2",
-            "description": "<p>With type.</p>"
+            "field": "email",
+            "description": "<p>user email address</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>user password</p>"
           }
         ]
       }
     },
-    "type": "",
-    "url": "",
     "version": "0.0.0",
-    "filename": "./doc/main.js",
-    "group": "d__Studia_Studia_Semestr_6_Zaawansowane_technologie_webowe_K_7_30_nimchat_doc_main_js",
-    "groupTitle": "d__Studia_Studia_Semestr_6_Zaawansowane_technologie_webowe_K_7_30_nimchat_doc_main_js",
-    "name": ""
+    "filename": "./routes/api/users.js",
+    "groupTitle": "Users"
   }
 ] });
