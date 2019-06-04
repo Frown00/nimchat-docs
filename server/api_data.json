@@ -341,6 +341,126 @@
     "groupTitle": "Profiles"
   },
   {
+    "type": "post",
+    "url": "api/search/conversation/new",
+    "title": "Create new conversation",
+    "name": "Create_new_conversation",
+    "group": "Search",
+    "permission": [
+      {
+        "name": "Private"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user1",
+            "description": "<p>First user id in conversation</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user2",
+            "description": "<p>Second user id in conversation</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./routes/api/search.js",
+    "groupTitle": "Search"
+  },
+  {
+    "type": "post",
+    "url": "api/search/conversation/messages",
+    "title": "Get all messages from current conversation",
+    "name": "Get_all_messages_from_current_conversation",
+    "group": "Search",
+    "permission": [
+      {
+        "name": "Private"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "conversationId",
+            "description": "<p>Current conversation id</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./routes/api/search.js",
+    "groupTitle": "Search"
+  },
+  {
+    "type": "post",
+    "url": "api/search/conversation/message",
+    "title": "Send message",
+    "name": "Send_message",
+    "group": "Search",
+    "permission": [
+      {
+        "name": "Private"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "userName",
+            "description": "<p>Author name of message</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Content of message</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "conversationId",
+            "description": "<p>Current conversation id</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "./routes/api/search.js",
+    "groupTitle": "Search"
+  },
+  {
+    "type": "post",
+    "url": "api/users/delete",
+    "title": "Delete account",
+    "name": "DeleteAccount",
+    "group": "Users",
+    "permission": [
+      {
+        "name": "Private"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "./routes/api/users.js",
+    "groupTitle": "Users"
+  },
+  {
     "type": "get",
     "url": "api/users/current",
     "title": "Get current user data",
